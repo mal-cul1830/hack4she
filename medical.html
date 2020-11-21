@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Info
+        </title>
+        <link rel="stylesheet" href="medical.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src = "questions.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="module">
+  import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
+
+  const swiper = new Swiper(".swiper-container", {
+    direction: "vertical",
+    loop: true,
+    pagination: ".swiper-pagination",
+    grabCursor: true,
+    speed: 1000,
+    paginationClickable: true,
+    parallax: true,
+    autoplay: false,
+    effect: "slide",
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+      }
+  });
+</script>
+    </head>
+
+    <body>
+      <div class="appbar"></div>
+      <form action = "/main.py" name = "medical">
+      <div class="page-wrap">
+        <div id="home-slider">
+            <div class="questions">
+                <div class="ques">
+                    <label for="age">Age: </label>
+                    <input name='age' type = 'number'>
+                </div>
+                <div class="ques">
+                    <label for="weight in KGs">Weight: </label>
+                    <input name='weight' type = 'number'>
+                </div>
+                <div class="ques">
+                    <label for="height in cms">Height: </label>
+                    <input name='height' type = 'number'>
+                </div>
+                <div class="ques">
+                    <label for="Glucose">Glucose: </label>
+                    <input name='Glucose' type = 'number' step = 0.0001>
+                </div>
+                <div class="ques">
+                    <label for="Insulin">Insulin: </label>
+                    <input name='Insulin' type = 'number' step = 0.0001>
+                </div>
+                <div class="ques">
+                    <label for="homa">HOMA: </label>
+                    <input name='homa' type = 'number' step = 0.0001>
+                </div>
+                <div class="ques">
+                    <label for="adiponectin">Adiponectin: </label>
+                    <input name='adiponectin' type = 'number' step = 0.0001>
+                </div>
+                <div class="ques">
+                    <label for="resistin">Resistin: </label>
+                    <input name='resistin' type = 'number' step = 0.0001>
+                </div>
+                <div class="ques">
+                    <label for="MCP">MCP.1: </label>
+                    <input name='MCP' type = 'number' step = 0.0001>
+                </div>
+                <div class="ques">
+                    <br>
+                    <input type="submit" value = "SUBMIT">
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    </body>
+</html>
